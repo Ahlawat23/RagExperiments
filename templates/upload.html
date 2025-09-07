@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Component</title>
+    <link rel="stylesheet" href="static/file-upload.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="upload-wrapper">
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" id="uploadTab">Upload Files</button>
+                <button class="tab-btn" id="uploadedTab">Uploaded Files</button>
+            </div>
+
+            <!-- Upload Tab Content -->
+            <div class="tab-content" id="uploadTabContent">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7,10 12,5 17,10"></polyline>
+                            <line x1="12" y1="5" x2="12" y2="15"></line>
+                        </svg>
+                    </div>
+                    <p class="upload-text">
+                        <span class="primary-text">Drag files to upload, or</span>
+                    </p>
+                    <button class="choose-file-btn" id="chooseFileBtn">Choose File</button>
+                    <input type="file" id="fileInput" multiple accept="*/*" style="display: none;">
+                </div>
+
+                <div class="file-list" id="fileList" style="display: none;">
+                    <h3 class="file-list-title">Selected Files</h3>
+                    <div class="files-container" id="filesContainer"></div>
+
+                    <div class="upload-section">
+                        <button class="upload-btn" id="uploadBtn" disabled>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7,10 12,5 17,10"></polyline>
+                                <line x1="12" y1="5" x2="12" y2="15"></line>
+                            </svg>
+                            Upload Files
+                        </button>
+
+                        <div class="upload-progress" id="uploadProgress" style="display: none;">
+                            <div class="progress-info">
+                                <span class="progress-text" id="progressText">Uploading...</span>
+                                <span class="progress-percentage" id="progressPercentage">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Uploaded Files Tab Content -->
+                <div class="tab-content" id="uploadedTabContent" style="display: none;">
+                    <div class="uploaded-files-header">
+                        <h3 class="uploaded-files-title">Uploaded Files</h3>
+                        <span class="uploaded-count" id="uploadedCount">0 files</span>
+                    </div>
+                    <div class="uploaded-files-container" id="uploadedFilesContainer">
+                        <div class="empty-state">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            </svg>
+                            <p class="empty-text">No files uploaded yet</p>
+                            <p class="empty-subtext">Files will appear here after uploading</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="static/file-upload.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>RagChatBot</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="brand">
+                <div class="logo"></div>
+                <div>
+                    <div class="title">RagChatBot</div>
+                    <div class="subtitle">Ask questions · Upload PDFs</div>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="pill">
+                    <span class="dot"></span>
+                    <span>Connected</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Panel -->
+        <main class="chat">
+            <section class="messages" id="messages">
+                <!-- Messages will appear here -->
+            </section>
+        </main>
+
+        <!-- Composer -->
+        <div class="composer-wrap">
+            <form id="chat-form" class="composer" enctype="multipart/form-data">
+                <textarea id="chatInput" name="message" class="input" placeholder="Type your message…" rows="1"
+                    required></textarea>
+
+                <div class="controls">
+                    <button class="btn" type="submit">➤ Send</button>
+                </div>
+            </form>
+            <div class="hint">Tip: You can attach multiple PDFs</div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
