@@ -18,8 +18,10 @@ export function LoadInterface(){
     
        
     </div>
-    <div class="input">
-       
+    <div class="lower-section">
+        <div class="chat-input">
+            <input type="text" placeholder="Ask anything" />
+        </div>
     </div>
     </>
     );
