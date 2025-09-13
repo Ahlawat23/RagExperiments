@@ -70,7 +70,7 @@ export default function ChatInterface() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-background">
+    <div className="relative flex-col h-screen w-full bg-background">
       {/* Header */}
       <div className="border-b border-border p-4 bg-background/95 backdrop-blur">
         <div className="flex items-center justify-between">
@@ -86,7 +86,7 @@ export default function ChatInterface() {
       </div>
 
       {/* Messages */}
-      <ScrollArea ref={scrollAreaRef} className="flex-1">
+      <ScrollArea ref={scrollAreaRef} className="flex-1 overflow-y-auto">
         <div className="space-y-0">
           {messages.map((message) => (
             <ChatMessage
@@ -110,8 +110,12 @@ export default function ChatInterface() {
         </div>
       </ScrollArea>
 
-      {/* Input */}
-      <ChatInput onSendMessage={handleSendMessage} disabled={isLoading} />
+       {/* Floating Input */}
+        <div className="absolute bottom-0 left-0 w-full border-t border-border bg-background p-2">
+          <ChatInput onSendMessage={handleSendMessage} disabled={isLoading} />
+        </div>
     </div>
+    
+    
   );
 }
