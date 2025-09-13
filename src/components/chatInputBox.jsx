@@ -22,11 +22,13 @@ export function ChatInput({ onSendMessage, disabled }) {
     }
   };
 
-  return (
-    <div className="p-4 bg-white">
+  return(
+     <div className="aboslute p-4 bg-background">
       <form onSubmit={handleSubmit}>
-        <div className="relative flex items-down max-w-4xl mx-auto">
-          <div className="relative flex items-down w-full bg-zinc-800 rounded-full border border-zinc-700 focus-within:border-zinc-600 transition-colors">
+        <div className="relative flex items-center max-w-4xl mx-auto">
+          <div className="relative flex items-center w-full bg-zinc-800 rounded-full border border-zinc-700 focus-within:border-zinc-600 transition-colors">
+           
+            
             {/* Input field */}
             <Input
               value={message}
@@ -60,5 +62,9 @@ export function ChatInput({ onSendMessage, disabled }) {
         </div>
       </form>
     </div>
+
   );
 }
+
+
+

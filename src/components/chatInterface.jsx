@@ -70,7 +70,7 @@ export default function ChatInterface() {
   };
 
   return (
-    <div className="relative flex-col h-screen w-full bg-background">
+     <div className="relative flex h-full max-w-full flex-1 flex-col">
       {/* Header */}
       <div className="border-b border-border p-4 bg-background/95 backdrop-blur">
         <div className="flex items-center justify-between">
@@ -78,7 +78,12 @@ export default function ChatInterface() {
             <Sparkles className="h-5 w-5 text-message-user" />
             <h1 className="font-semibold text-lg">AI Chat Assistant</h1>
           </div>
-          <Button variant="outline" size="sm" onClick={handleNewChat} className="gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleNewChat}
+            className="gap-2"
+          >
             <RefreshCw className="h-4 w-4" />
             New Chat
           </Button>
@@ -86,7 +91,7 @@ export default function ChatInterface() {
       </div>
 
       {/* Messages */}
-      <ScrollArea ref={scrollAreaRef} className="flex-1 overflow-y-auto">
+      <ScrollArea ref={scrollAreaRef} className="flex-1">
         <div className="space-y-0">
           {messages.map((message) => (
             <ChatMessage
@@ -110,10 +115,8 @@ export default function ChatInterface() {
         </div>
       </ScrollArea>
 
-       {/* Floating Input */}
-        <div className="absolute bottom-0 left-0 w-full border-t border-border bg-background p-2">
-          <ChatInput onSendMessage={handleSendMessage} disabled={isLoading} />
-        </div>
+      {/* Input */}
+      <ChatInput onSendMessage={handleSendMessage} disabled={isLoading} />
     </div>
     
     
