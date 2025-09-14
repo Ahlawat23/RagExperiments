@@ -10,6 +10,7 @@ export  function ChatInput({onSendMessage}){
         e.preventDefault();
         
         if(message.trim()){
+            console.log("user typed " + message);
             onSendMessage(message);
             setMessage("");
         }

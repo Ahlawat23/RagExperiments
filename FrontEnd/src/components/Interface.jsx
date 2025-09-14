@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import './style/interface.css'
 import { RefreshCw, Sparkles } from "lucide-react";
 import {ChatInput} from "./Input.jsx";
+import {MessageUI} from "./Message.jsx";
 
 
 const initialMessages = [
@@ -59,8 +60,15 @@ export function LoadInterface(){
         </div>
     </div>
     <div class="chat-container">
-    
-       
+        {messages.map((message) => (
+            <MessageUI
+              key={message.id}
+              message={message.text}
+              isUser={message.isUser}
+              timestamp={message.timestamp}
+            />
+          ))}
+          <div ref={messagesEndRef} />
     </div>
     <ChatInput onSendMessage={handleSendMessage}/>
     </>
