@@ -55,9 +55,9 @@ export function LoadInterface(){
         <div class="header-left"> 
             <Sparkles /> <h3>. . Chatter</h3>
         </div>
-        <div class="header-right">
+        {/* <div class="header-right">
              <button class="new-chat-button"> <RefreshCw /> New chat</button>
-        </div>
+        </div> */}
     </div>
     <div class="chat-container">
         {messages.map((message) => (
