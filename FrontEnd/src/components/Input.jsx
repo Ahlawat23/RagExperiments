@@ -6,7 +6,9 @@ export  function ChatInput({onSendMessage}){
     const [message, setMessage] = useState("");
 
     const handleSubmit = (e) => {
+        
         e.preventDefault();
+        
         if(message.trim()){
             onSendMessage(message);
             setMessage("");
@@ -16,10 +18,10 @@ export  function ChatInput({onSendMessage}){
     return(
         <>
         <div class="lower-section">
-            <div class="chat-input">
+            <form class="chat-input" onSubmit={handleSubmit}>
                 <input type="text" placeholder="Ask anything" value={message} onChange={(e) => setMessage(e.target.value)}/>
-                <button class="submit"><Send /> </button>
-            </div>
+                <button type="submit" class="submit"><Send /> </button>
+            </form>
         </div>
        
         </>
