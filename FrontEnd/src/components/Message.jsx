@@ -4,10 +4,16 @@ import './style/message.css'
 export function MessageUI({message, isUser, timestamp}){
     return(
         <>
-        <div class="messageBox">
+        {isUser? ( // USER
+        <div class="user-message">
             <div class="message-text">{message}</div>
-            <div class="message-timestamp">{timestamp}</div>
         </div>
+
+        ):( //AI RESPONSE
+        <div class="bot-message">
+            <div class="bot-text">{message}</div>
+        </div>
+        )} 
         </>
     );
 }

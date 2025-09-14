@@ -8,7 +8,7 @@ import {MessageUI} from "./Message.jsx";
 const initialMessages = [
   {
     id: 1,
-    text: "Hello! I'm ChatGPT running in Windows Vista style. How can I help you today?",
+    text: "Hello! I'm Chatter. How can i help you today?",
     isUser: false,
     timestamp: new Date().toLocaleTimeString(),
   },

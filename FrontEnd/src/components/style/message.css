@@ -1,3 +1,24 @@
-.messageBox{
-    background-color: black;
+.user-message{
+    right: 0;
+
+    width: 400px;
+    border-radius: 33px;
+    background: var(--accent-color-active);
+    padding: 20px;
+}
+
+.message-text {
+    text-align: right;
+    font-size: 20px;
+}
+
+.bot-message{
+    background: transparent;
+    padding: 20px;
+}
+
+.bot-text {
+    color: var(--text-color);
+    text-align: left;
+    font-size: 20px;
 }
