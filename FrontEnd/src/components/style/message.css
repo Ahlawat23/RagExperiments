@@ -1,14 +1,17 @@
 .user-message{
-    right: 0;
 
+    margin-left: auto;
+    margin-right: 0;
+    
     width: 400px;
     border-radius: 33px;
     background: var(--accent-color-active);
     padding: 20px;
+    margin-bottom: 10px;
 }
 
 .message-text {
-    text-align: right;
+    text-align: left;
     font-size: 20px;
 }
 
