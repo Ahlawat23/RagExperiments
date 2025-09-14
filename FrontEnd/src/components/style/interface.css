@@ -96,5 +96,17 @@
 
   margin: 0px auto 100px auto;
   padding: 33px;
+
+  /* Add scrolling */
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.chat-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
