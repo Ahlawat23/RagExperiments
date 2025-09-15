@@ -77,7 +77,7 @@
   right: 0;
   top: 25px;
   
-  background: transparent; /* frosted glass */
+  background: #39393936; /* frosted glass */
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
 
